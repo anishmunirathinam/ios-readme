@@ -20,8 +20,11 @@ struct RMBookRow: View {
 
     var body: some View {
         HStack {
-            RMBook.Image(title: book.title)
-            RMBookInfoStack(title: book.title, author: book.author)
+            RMBook.Image(title: book.title, size: 80)
+            RMBookInfoStack(title: book.title,
+                            author: book.author,
+                            titleFont: .title2,
+                            authorFont: .title3)
         }
     }
 }

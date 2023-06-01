@@ -10,6 +10,7 @@
 		F9A75D162A289FC5005B7087 /* RMBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A75D152A289FC5005B7087 /* RMBook.swift */; };
 		F9A75D182A289FF0005B7087 /* RMBookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A75D172A289FF0005B7087 /* RMBookList.swift */; };
 		F9A75D1A2A28A06C005B7087 /* RMBookViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A75D192A28A06C005B7087 /* RMBookViews.swift */; };
+		F9A75D1C2A28A417005B7087 /* RMBookDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A75D1B2A28A417005B7087 /* RMBookDetails.swift */; };
 		F9D3178D2A2756770011E859 /* ReadMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D3178C2A2756770011E859 /* ReadMeApp.swift */; };
 		F9D317912A2756790011E859 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9D317902A2756790011E859 /* Assets.xcassets */; };
 		F9D317942A2756790011E859 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9D317932A2756790011E859 /* Preview Assets.xcassets */; };
@@ -19,6 +20,7 @@
 		F9A75D152A289FC5005B7087 /* RMBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMBook.swift; sourceTree = "<group>"; };
 		F9A75D172A289FF0005B7087 /* RMBookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMBookList.swift; sourceTree = "<group>"; };
 		F9A75D192A28A06C005B7087 /* RMBookViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMBookViews.swift; sourceTree = "<group>"; };
+		F9A75D1B2A28A417005B7087 /* RMBookDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMBookDetails.swift; sourceTree = "<group>"; };
 		F9D317892A2756770011E859 /* ReadMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D3178C2A2756770011E859 /* ReadMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadMeApp.swift; sourceTree = "<group>"; };
 		F9D317902A2756790011E859 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				F9A75D172A289FF0005B7087 /* RMBookList.swift */,
+				F9A75D1B2A28A417005B7087 /* RMBookDetails.swift */,
 				F9A75D192A28A06C005B7087 /* RMBookViews.swift */,
 			);
 			path = Views;
@@ -173,6 +176,7 @@
 				F9D3178D2A2756770011E859 /* ReadMeApp.swift in Sources */,
 				F9A75D162A289FC5005B7087 /* RMBook.swift in Sources */,
 				F9A75D182A289FF0005B7087 /* RMBookList.swift in Sources */,
+				F9A75D1C2A28A417005B7087 /* RMBookDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
