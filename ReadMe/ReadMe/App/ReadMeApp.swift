@@ -11,7 +11,7 @@ import SwiftUI
 struct ReadMeApp: App {
     var body: some Scene {
         WindowGroup {
-            RMBookListView()
+            RMBookList()
         }
     }
 }
