@@ -17,6 +17,7 @@ struct RMBookDetails: View {
                             titleFont: .title,
                             authorFont: .title2)
             RMBook.Image(title: book.title, size: nil)
+            Spacer()
         }
         .padding()
     }

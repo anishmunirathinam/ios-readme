@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct RMBookList: View {
+    @State private var library: RMLibrary = RMLibrary()
+
     var body: some View {
-        List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-            RMBookRow(book: RMBook())
+        NavigationView {
+            List(library.sortedBooks, id: \.self) { book in
+                RMBookRow(book: book)
+            }
+            .navigationTitle("My Library")
         }
     }
 }
@@ -19,12 +24,15 @@ struct RMBookRow: View {
     let book: RMBook
 
     var body: some View {
-        HStack {
-            RMBook.Image(title: book.title, size: 80)
-            RMBookInfoStack(title: book.title,
-                            author: book.author,
-                            titleFont: .title2,
-                            authorFont: .title3)
+        NavigationLink(destination: RMBookDetails(book: book)) {
+            HStack {
+                RMBook.Image(title: book.title, size: 80)
+                RMBookInfoStack(title: book.title,
+                                author: book.author,
+                                titleFont: .title2,
+                                authorFont: .title3)
+                .lineLimit(1)
+            }
         }
     }
 }

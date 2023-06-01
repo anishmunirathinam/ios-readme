@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RMBook {
+struct RMBook: Hashable {
     let title: String
     let author: String
 
