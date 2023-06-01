@@ -34,8 +34,26 @@ extension Image {
     }
 }
 
+struct RMBookInfoStack: View {
+    let title: String
+    let author: String
+
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(title)
+            Text(author)
+                .foregroundColor(.secondary)
+        }
+    }
+}
+
 struct RMBookViews_Previews: PreviewProvider {
     static var previews: some View {
-        RMBook.Image(title: RMBook().title)
+        VStack(spacing: 10) {
+            RMBookInfoStack(title: "Title", author: "Author")
+            RMBook.Image(title: RMBook().title)
+            RMBook.Image(title: "")
+            RMBook.Image(title: "📖")
+        }
     }
 }

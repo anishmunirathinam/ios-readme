@@ -9,7 +9,20 @@ import SwiftUI
 
 struct RMBookList: View {
     var body: some View {
-        RMBook.Image(title: RMBook().title)
+        List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+            RMBookRow(book: RMBook())
+        }
+    }
+}
+
+struct RMBookRow: View {
+    let book: RMBook
+
+    var body: some View {
+        HStack {
+            RMBook.Image(title: book.title)
+            RMBookInfoStack(title: book.title, author: book.author)
+        }
     }
 }
 
