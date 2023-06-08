@@ -17,8 +17,19 @@ struct RMUpdateImageButton: View {
     }
 }
 
+struct RMDeleteImageButton: View {
+    @Binding var showConfirmationDialog: Bool
+
+    var body: some View {
+        Button("Delete") {
+            showConfirmationDialog = true
+        }
+    }
+}
+
 struct RMButtons_Previews: PreviewProvider {
     static var previews: some View {
         RMUpdateImageButton(showImagePicker: .constant(false))
+        RMDeleteImageButton(showConfirmationDialog: .constant(false))
     }
 }

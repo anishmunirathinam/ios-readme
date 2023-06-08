@@ -11,6 +11,7 @@ import class PhotosUI.PHPickerViewController
 struct RMBookDetails: View {
     let book: RMBook
     @State private var showImagePicker: Bool = false
+    @State private var showConfirmationDialog: Bool = false
     @Binding var image: Image?
 
     var body: some View {
@@ -22,14 +23,27 @@ struct RMBookDetails: View {
             VStack {
                 RMBook.Image(image: image, title: book.title, size: nil, cornerRadius: 16.0)
                     .scaledToFit()
-                RMUpdateImageButton(showImagePicker: $showImagePicker)
-                    .padding()
+                HStack {
+                    if image != nil {
+                        Spacer()
+                        RMDeleteImageButton(showConfirmationDialog: $showConfirmationDialog)
+                    }
+                    Spacer()
+                    RMUpdateImageButton(showImagePicker: $showImagePicker)
+                    Spacer()
+                }
+                .padding()
             }
             Spacer()
         }
         .padding()
         .sheet(isPresented: $showImagePicker) {
             PHPickerViewController.View(image: $image)
+        }
+        .confirmationDialog("Delete image for \(book.title)?", isPresented: $showConfirmationDialog) {
+            Button("Delete", role: .destructive) {
+                image = nil
+            }
         }
     }
 }
