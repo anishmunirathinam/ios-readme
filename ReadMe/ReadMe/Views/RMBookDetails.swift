@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import class PhotosUI.PHPickerViewController
 
 struct RMBookDetails: View {
     let book: RMBook
+    @State private var showImagePicker: Bool = false
+    @Binding var image: Image?
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -16,15 +19,23 @@ struct RMBookDetails: View {
                             author: book.author,
                             titleFont: .title,
                             authorFont: .title2)
-            RMBook.Image(title: book.title, size: nil)
+            VStack {
+                RMBook.Image(image: image, title: book.title, size: nil, cornerRadius: 16.0)
+                    .scaledToFit()
+                RMUpdateImageButton(showImagePicker: $showImagePicker)
+                    .padding()
+            }
             Spacer()
         }
         .padding()
+        .sheet(isPresented: $showImagePicker) {
+            PHPickerViewController.View(image: $image)
+        }
     }
 }
 
 struct RMBookDetails_Previews: PreviewProvider {
     static var previews: some View {
-        RMBookDetails(book: RMBook())
+        RMBookDetails(book: RMBook(), image: .constant(nil))
     }
 }

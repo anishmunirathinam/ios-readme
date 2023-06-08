@@ -9,17 +9,27 @@ import SwiftUI
 
 extension RMBook {
     struct Image: View {
+        let image: SwiftUI.Image?
         let title: String
         let size: CGFloat?
+        let cornerRadius: CGFloat
 
         var body: some View {
-            let symbol = SwiftUI.Image(title: title) ?? .init(systemName: "book")
-            symbol
-                .resizable()
-                .scaledToFit()
-                .frame(width: size, height: size)
-                .font(Font.title.weight(.light))
-                .foregroundColor(.secondary.opacity(0.5))
+            if let image = image {
+                image
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: size, height: size)
+                    .cornerRadius(cornerRadius)
+            } else {
+                let symbol = SwiftUI.Image(title: title) ?? .init(systemName: "book")
+                symbol
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: size, height: size)
+                    .font(Font.title.weight(.light))
+                    .foregroundColor(.secondary.opacity(0.5))
+            }
         }
     }
 }
@@ -52,13 +62,19 @@ struct RMBookInfoStack: View {
     }
 }
 
+private extension RMBook.Image {
+    init(title: String) {
+        self.init(image: nil, title: title, size: 80, cornerRadius: 12.0)
+    }
+}
+
 struct RMBookViews_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 10) {
             RMBookInfoStack(title: "Title", author: "Author", titleFont: .title2, authorFont: .title3)
-            RMBook.Image(title: RMBook().title, size: 80)
-            RMBook.Image(title: "", size: 80)
-            RMBook.Image(title: "📖", size: 80)
+            RMBook.Image(title: RMBook().title)
+            RMBook.Image(title: "")
+            RMBook.Image(title: "📖")
         }
     }
 }

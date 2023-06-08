@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F949ECD92A31B762000386BC /* RMButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F949ECD82A31B762000386BC /* RMButtons.swift */; };
+		F949ECDB2A31B885000386BC /* PHPickerViewController.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F949ECDA2A31B885000386BC /* PHPickerViewController.View.swift */; };
 		F9A75D162A289FC5005B7087 /* RMBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A75D152A289FC5005B7087 /* RMBook.swift */; };
 		F9A75D182A289FF0005B7087 /* RMBookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A75D172A289FF0005B7087 /* RMBookList.swift */; };
 		F9A75D1A2A28A06C005B7087 /* RMBookViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A75D192A28A06C005B7087 /* RMBookViews.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F949ECD82A31B762000386BC /* RMButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMButtons.swift; sourceTree = "<group>"; };
+		F949ECDA2A31B885000386BC /* PHPickerViewController.View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHPickerViewController.View.swift; sourceTree = "<group>"; };
 		F9A75D152A289FC5005B7087 /* RMBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMBook.swift; sourceTree = "<group>"; };
 		F9A75D172A289FF0005B7087 /* RMBookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMBookList.swift; sourceTree = "<group>"; };
 		F9A75D192A28A06C005B7087 /* RMBookViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMBookViews.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 				F9A75D172A289FF0005B7087 /* RMBookList.swift */,
 				F9A75D1B2A28A417005B7087 /* RMBookDetails.swift */,
 				F9A75D192A28A06C005B7087 /* RMBookViews.swift */,
+				F949ECDA2A31B885000386BC /* PHPickerViewController.View.swift */,
+				F949ECD82A31B762000386BC /* RMButtons.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +187,8 @@
 				F9A75D182A289FF0005B7087 /* RMBookList.swift in Sources */,
 				F9A75D1E2A28A706005B7087 /* RMLibrary.swift in Sources */,
 				F9A75D1C2A28A417005B7087 /* RMBookDetails.swift in Sources */,
+				F949ECDB2A31B885000386BC /* PHPickerViewController.View.swift in Sources */,
+				F949ECD92A31B762000386BC /* RMButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
